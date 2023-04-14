@@ -1,0 +1,15 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+#Button {
+  padding: 20px;
+  font-size: larger;
+  font-weight: 700;
+  font-family: sans-serif;
+  background-color: blueviolet;
+  border: none;
+  border-radius: 30px;
+}

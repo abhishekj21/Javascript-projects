@@ -1,0 +1,24 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+p {
+  font-size: 2rem;
+}
+button {
+  border: none;
+  padding: 5px 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
+button.Red {
+  background-color: red;
+}
+button.Green {
+  background-color: green;
+}
+button.Blue {
+  background-color: blue;
+}

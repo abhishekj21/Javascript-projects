@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-shadow: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: antiquewhite;
+  width: 400px;
+  height: 380px;
+  text-align: center;
+  border-radius: 20px;
+}
+.header {
+  margin-top: 2rem;
+}
+.header p {
+  margin-top: 2rem;
+}
+
+.container h3 {
+  margin-top: 1.5rem;
+}
+.container button {
+  margin-top: 2rem;
+  padding: 1rem 7.8rem;
+}
+.container input {
+  margin-top: 0.5rem;
+  padding: 1rem 6rem;
+  text-align: center;
+}
+.info-txt {
+  color: black;
+  margin-top: 0.5rem;
+}

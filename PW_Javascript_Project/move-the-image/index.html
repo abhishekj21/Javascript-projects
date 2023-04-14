@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Move Image with Arrow Keys</title>
+    <style>
+      #image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100px;
+        height: 100px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <img
+      id="image"
+      src="https://via.placeholder.com/100x100"
+      alt="Moving Image"
+    />
+    <script>
+      const image = document.getElementById("image");
+      let x = 0;
+      let y = 0;
+
+      function moveImage(event) {
+        const keyCode = event.keyCode;
+
+        switch (keyCode) {
+          case 37: // left arrow
+            x -= 10;
+            break;
+          case 38: // up arrow
+            y -= 10;
+            break;
+          case 39: // right arrow
+            x += 10;
+            break;
+          case 40: // down arrow
+            y += 10;
+            break;
+          default:
+            return;
+        }
+
+        const maxX = window.innerWidth - image.width;
+        const maxY = window.innerHeight - image.height;
+        x = Math.max(0, Math.min(x, maxX));
+        y = Math.max(0, Math.min(y, maxY));
+
+        image.style.transform = `translate(${x}px, ${y}px)`;
+      }
+
+      document.addEventListener("keydown", moveImage);
+    </script>
+  </body>
+</html>
+This paste expires in <1 hour. Public IP access. Share whatever you see with
+others in seconds with Context.Terms of ServiceReport this

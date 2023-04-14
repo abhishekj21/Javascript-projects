@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Highlight Long Words</title>
+    <style>
+      .highlight {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+
+  <body>
+    <p id="paragraph">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum
+      viverra dui, vel tempus lorem porttitor sit amet. Mauris in sagittis
+      lectus. Aliquam erat volutpat. Lorem ipsum dolor sit amet consectetur
+      adipisicing elit. Pariatur veritatis architecto tempore maxime? Eum eaque
+      doloribus maiores harum distinctio, odit eos incidunt voluptates facilis
+      similique. Veritatis, minus aliquam maxime quam ab adipisci ipsam odio
+      nihil perspiciatis. Aliquam, inventore iusto doloribus corporis debitis
+      sint aspernatur ex, quam error eos reprehenderit porro. Ipsum rerum nihil
+      nulla deserunt illo omnis voluptas porro sed quia aperiam, accusamus ad
+      velit sit eum nostrum possimus magni dolorem voluptates enim maiores
+      expedita incidunt sunt! Laborum sequi est, ab repellendus nostrum ex,
+      architecto non deleniti, corporis vitae minima dicta at alias! Iste fugiat
+      iusto eaque omnis saepe ea?
+    </p>
+    <script>
+      const paragraph = document.getElementById("paragraph");
+      const words = paragraph.textContent.split(" ");
+      const longWords = words.filter((word) => word.length > 8);
+      longWords.forEach((longWord) => {
+        const span = document.createElement("span");
+        span.innerText = longWord + " ";
+        span.classList.add("highlight");
+        paragraph.innerHTML = paragraph.innerHTML.replace(
+          longWord + " ",
+          span.outerHTML
+        );
+      });
+    </script>
+  </body>
+</html>

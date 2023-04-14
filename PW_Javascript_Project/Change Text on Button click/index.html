@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Change text</title>
+  </head>
+  <body>
+    <h1>The most affordable learning platform</h1>
+    <button id="btn">Click Me</button>
+  </body>
+  <script>
+    document.getElementById("btn").addEventListener("click", change_Text);
+
+    function change_Text() {
+      if (
+        document.querySelector("h1").innerHTML ===
+        "The most affordable learning platform"
+      )
+        document.querySelector("h1").innerHTML = "PW Skills";
+      else
+        document.querySelector("h1").innerHTML =
+          "The most affordable learning platform";
+    }
+  </script>
+</html>
